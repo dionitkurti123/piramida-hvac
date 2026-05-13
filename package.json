@@ -1,0 +1,13 @@
+{
+  "name": "piramida-hvac-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static GitHub Pages website for Piramida HVAC.",
+  "scripts": {
+    "sync:products": "node scripts/import-products.js",
+    "serve": "python3 -m http.server 8080"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

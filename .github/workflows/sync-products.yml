@@ -1,0 +1,38 @@
+name: Sync Sinclair products
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 5 * * 1"
+
+permissions:
+  contents: write
+
+jobs:
+  sync-products:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Sync products
+        env:
+          SINCLAIR_PRODUCTS_URL: ${{ secrets.SINCLAIR_PRODUCTS_URL }}
+        run: node scripts/import-products.js
+
+      - name: Commit changes
+        run: |
+          if [[ -n "$(git status --porcelain)" ]]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add data/products.json
+            git commit -m "Update product catalog"
+            git push
+          else
+            echo "No product changes to commit."
+          fi

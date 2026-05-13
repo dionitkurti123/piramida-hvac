@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="sq">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Produktet | Piramida HVAC</title>
+  <meta name="description" content="Shikoni produktet HVAC, klima, pompa termike dhe sisteme Sinclair te Piramida HVAC në Fushë Kosovë.">
+  <link rel="icon" href="assets/logo.png">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <div class="top-strip">
+    <div class="container">
+      <span>Shitje • Montim • Servis HVAC në <strong data-company-city>Fushë Kosovë</strong></span>
+      <span><a data-company-phone href="tel:+3834XXXXXXX">+383 4X XXX XXX</a> · <a data-company-email href="mailto:info@piramidahvac.com">info@piramidahvac.com</a></span>
+    </div>
+  </div>
+  <header class="site-header">
+    <div class="container navbar">
+      <a class="brand" href="index.html" aria-label="Piramida HVAC home">
+        <img src="assets/logo.png" alt="Piramida HVAC logo">
+        <div><strong>PIRAMIDA</strong><span>HVAC</span></div>
+      </a>
+      <button class="mobile-menu-btn" data-menu-button aria-label="Open menu"><span></span><span></span><span></span></button>
+      <nav class="nav-links" data-nav-links>
+        <a href="index.html">Ballina</a>
+        <a href="about.html">Rreth nesh</a>
+        <a href="products.html">Produktet</a>
+        <a href="contact.html">Kontakt</a>
+        <a class="nav-cta" data-company-whatsapp href="https://wa.me/3834XXXXXXX" target="_blank" rel="noopener">WhatsApp</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container reveal">
+        <p class="breadcrumb">Ballina / Produktet</p>
+        <h1>Produktet <span>HVAC</span></h1>
+        <p class="lead">Kjo faqe lexon automatikisht produktet nga <strong>data/products.json</strong>. Mund ta përditësoni manualisht ose me GitHub Action nga një feed zyrtar.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2 class="section-title">Katalogu i produkteve</h2>
+          <p class="section-subtitle">Filtro sipas kategorisë ose kërko me emër/model. Çmimet mund të vendosen më vonë, ose mund të mbeten “me ofertë”.</p>
+        </div>
+
+        <div class="product-controls reveal" aria-label="Product filters">
+          <input data-product-search type="search" placeholder="Kërko produkt, model, kategori..." aria-label="Kërko produkt">
+          <select data-product-category aria-label="Filtro sipas kategorisë">
+            <option value="">Të gjitha kategoritë</option>
+          </select>
+          <select data-product-sort aria-label="Rendit produktet">
+            <option value="default">Renditja</option>
+            <option value="az">A-Z</option>
+            <option value="category">Kategori</option>
+          </select>
+        </div>
+
+        <div class="products-grid" data-products-grid></div>
+        <div class="empty-state" data-products-empty>
+          <h3>Nuk u gjet asnjë produkt</h3>
+          <p>Provo të ndryshosh kërkimin ose kategorinë.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container grid-2">
+        <div class="reveal">
+          <p class="kicker">Sinkronizimi me Sinclair</p>
+          <h2 class="section-title">Opsioni më i mirë për GitHub Pages</h2>
+          <p class="section-subtitle">GitHub Pages është statik, prandaj produktet duhet të lexohen nga një JSON në repo. Nëse Sinclair ose distributori jep API/CSV/JSON zyrtar, GitHub Action mund ta marrë atë dhe ta përditësojë automatikisht <strong>data/products.json</strong>.</p>
+        </div>
+        <div class="card reveal">
+          <h3>Si përdoret tani?</h3>
+          <p>Ndrysho <strong>data/products.json</strong> dhe produktet shfaqen automatikisht në këtë faqe. Për sinkronizim automatik, vendos një URL zyrtare në secret <strong>SINCLAIR_PRODUCTS_URL</strong> në GitHub.</p>
+          <a class="btn btn-primary" href="contact.html">Kërko ndihmë për produkt</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div><img src="assets/logo.png" alt="Piramida HVAC logo"><p>Piramida HVAC ofron zgjidhje për ftohje, ngrohje dhe ventilim në Fushë Kosovë dhe rrethinë.</p></div>
+        <div><h3>Faqet</h3><a href="index.html">Ballina</a><a href="about.html">Rreth nesh</a><a href="products.html">Produktet</a><a href="contact.html">Kontakt</a></div>
+        <div><h3>Shërbime</h3><a href="products.html">Klima</a><a href="products.html">Pompa termike</a><a href="contact.html">Montim</a><a href="contact.html">Servis</a></div>
+        <div><h3>Kontakt</h3><a data-company-phone href="tel:+3834XXXXXXX">+383 4X XXX XXX</a><a data-company-email href="mailto:info@piramidahvac.com">info@piramidahvac.com</a><p data-company-address>Fushë Kosovë, Kosovë</p></div>
+      </div>
+      <div class="footer-bottom"><span>© <span data-year></span> Piramida HVAC. Të gjitha të drejtat e rezervuara.</span><span>Built for GitHub Pages.</span></div>
+    </div>
+  </footer>
+  <script src="assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+[
+  {
+    "id": "sinclair-wall-mounted",
+    "brand": "Sinclair",
+    "model": "Wall Mounted Units",
+    "category": "Klima / AC",
+    "capacity": "Kapacitete të ndryshme",
+    "energyClass": "Sipas modelit",
+    "refrigerant": "R32",
+    "description": "Njësi murale për shtëpi, banesa, zyra dhe lokale. Për ftohje dhe ngrohje të përditshme.",
+    "features": [
+      "Inverter",
+      "Ftohje dhe ngrohje",
+      "Dizajn kompakt",
+      "Opsion Wi‑Fi sipas modelit"
+    ],
+    "image": "",
+    "productUrl": "https://www.sinclair-solutions.com/en/products/"
+  },
+  {
+    "id": "sinclair-multi-variable-r32",
+    "brand": "Sinclair",
+    "model": "MULTI VARIABLE Series R32",
+    "category": "Multi Split",
+    "capacity": "Multi-zone",
+    "energyClass": "Sipas modelit",
+    "refrigerant": "R32",
+    "description": "Zgjidhje për disa dhoma me një njësi të jashtme dhe disa njësi të brendshme.",
+    "features": [
+      "Një jashtme për disa ambiente",
+      "Fleksibilitet instalimi",
+      "E përshtatshme për banesa dhe zyra",
+      "Kontroll sipas zonës"
+    ],
+    "image": "",
+    "productUrl": "https://www.sinclair-solutions.com/en/products/"
+  },
+  {
+    "id": "sinclair-heat-pumps-r290",
+    "brand": "Sinclair",
+    "model": "Heat Pumps R290",
+    "category": "Pompa Termike",
+    "capacity": "Sipas projektit",
+    "energyClass": "Sipas modelit",
+    "refrigerant": "R290",
+    "description": "Seri pompash termike me ftohës R290 për aplikime ku kërkohet efikasitet dhe performancë në ngrohje.",
+    "features": [
+      "Ftohës R290",
+      "Performancë për ngrohje",
+      "Zgjidhje moderne",
+      "Instalim sipas projektit"
+    ],
+    "image": "",
+    "productUrl": "https://www.sinclair-solutions.com/en/products/"
+  },
+  {
+    "id": "sinclair-heat-pumps-r32",
+    "brand": "Sinclair",
+    "model": "Heat Pumps R32",
+    "category": "Pompa Termike",
+    "capacity": "Sipas projektit",
+    "energyClass": "Sipas modelit",
+    "refrigerant": "R32",
+    "description": "Pompa termike për ngrohje dhe ftohje efikase në objekte rezidenciale ose komerciale.",
+    "features": [
+      "Ngrohje dhe ftohje",
+      "Efikasitet energjetik",
+      "Përshtatje me projekt",
+      "Zgjidhje afatgjatë"
+    ],
+    "image": "",
+    "productUrl": "https://www.sinclair-solutions.com/en/products/"
+  },
+  {
+    "id": "sinclair-commercial-sdv5",
+    "brand": "Sinclair",
+    "model": "Commercial System SDV5",
+    "category": "Sisteme Komerciale",
+    "capacity": "Komercial",
+    "energyClass": "Sipas modelit",
+    "refrigerant": "Sipas modelit",
+    "description": "Zgjidhje komerciale për ftohje dhe ngrohje në hapësira me kërkesa më të mëdha teknike.",
+    "features": [
+      "Për zyra dhe biznese",
+      "Konfigurim me projekt",
+      "Kontroll i zonave",
+      "Instalim profesional"
+    ],
+    "image": "",
+    "productUrl": "https://www.sinclair-solutions.com/en/products/"
+  },
+  {
+    "id": "sinclair-commercial-sdv6",
+    "brand": "Sinclair",
+    "model": "Commercial System SDV6",
+    "category": "Sisteme Komerciale",
+    "capacity": "Komercial",
+    "energyClass": "Sipas modelit",
+    "refrigerant": "Sipas modelit",
+    "description": "Sistem komercial HVAC për objekte më të mëdha, zyra, hotele, restorante ose hapësira biznesi.",
+    "features": [
+      "Për objekte komerciale",
+      "Fleksibilitet i lartë",
+      "Projektim sipas nevojës",
+      "Mbështetje për shumë zona"
+    ],
+    "image": "",
+    "productUrl": "https://www.sinclair-solutions.com/en/products/"
+  },
+  {
+    "id": "sinclair-uni-split-r32",
+    "brand": "Sinclair",
+    "model": "UNI SPLIT Series R32",
+    "category": "Sisteme Split",
+    "capacity": "Sipas modelit",
+    "energyClass": "Sipas modelit",
+    "refrigerant": "R32",
+    "description": "Sisteme split për aplikime të ndryshme, të përshtatshme për ambiente rezidenciale dhe komerciale.",
+    "features": [
+      "Seri split",
+      "R32",
+      "Zgjidhje fleksibile",
+      "Kapacitete të ndryshme"
+    ],
+    "image": "",
+    "productUrl": "https://www.sinclair-solutions.com/en/products/"
+  }
+]
