@@ -86,3 +86,8 @@ Open:
 ```text
 http://localhost:8080
 ```
+
+
+## Product page layout
+
+The product page now uses a Sinclair-style Albanian category layout. Edit `data/products.json` to add or remove categories. Product images are local SVG files in `assets/products/`, so the page works fully on GitHub Pages.

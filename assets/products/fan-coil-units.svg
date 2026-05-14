@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="340" height="210" viewBox="0 0 340 210" role="img" aria-label="fan-coil-units.svg">
+  <rect width="340" height="210" fill="#ffffff"/>
+  
+  <rect x="42" y="54" width="98" height="26" rx="5" fill="#f0f1f3" stroke="#d9d9d9"/>
+  <rect x="64" y="116" width="75" height="48" rx="5" fill="#f7f7f7" stroke="#d9d9d9"/>
+  <rect x="158" y="58" width="72" height="94" rx="5" fill="#f4f4f4" stroke="#d9d9d9"/>
+  <path d="M158 76h72M158 94h72M158 112h72" stroke="#c8c8c8"/>
+  <rect x="238" y="91" width="60" height="50" rx="5" fill="#e8eaed" stroke="#d9d9d9"/>
+
+</svg>

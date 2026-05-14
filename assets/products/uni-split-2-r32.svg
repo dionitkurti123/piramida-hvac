@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="340" height="210" viewBox="0 0 340 210" role="img" aria-label="uni-split-2-r32.svg">
+  <rect width="340" height="210" fill="#ffffff"/>
+  
+  <rect x="49" y="42" width="72" height="72" rx="7" fill="#f7f7f7" stroke="#d9d9d9"/>
+  <circle cx="85" cy="78" r="25" fill="#ededed" stroke="#cfcfcf"/>
+  <rect x="43" y="128" width="98" height="32" rx="4" fill="#f1f2f3" stroke="#d9d9d9"/>
+  <rect x="172" y="58" width="82" height="96" rx="7" fill="#f8f8f8" stroke="#d9d9d9" stroke-width="3"/>
+  
+    <circle cx="213" cy="106" r="32" fill="#f4f4f4" stroke="#d9d9d9" stroke-width="3"/>
+    <circle cx="213" cy="106" r="8" fill="#b8babf"/>
+    <path d="M213 98 C251 48,291 82,243 108 C231 114,217 109,213 98Z" fill="#b8babf" opacity=".95"/>
+    <path d="M221 108 C281 122,255 180,214 137 C205 128,208 113,221 108Z" fill="#b8babf" opacity=".95"/>
+    <path d="M207 113 C168 164,129 123,185 101 C198 96,209 100,207 113Z" fill="#b8babf" opacity=".95"/>
+    <path d="M207 100 C147 80,181 30,217 76 C225 86,220 98,207 100Z" fill="#b8babf" opacity=".95"/>
+    
+  <path d="M252 65l14 10-14 10-14-10z" fill="#ed1c24"/>
+  <path d="M266 72l14 10-14 10-14-10z" fill="#0eaae5"/>
+
+</svg>

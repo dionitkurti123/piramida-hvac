@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="340" height="210" viewBox="0 0 340 210" role="img" aria-label="wall-mounted-units.svg">
+  <rect width="340" height="210" fill="#ffffff"/>
+  
+  <rect x="42" y="44" width="178" height="48" rx="8" fill="#f1f2f3" stroke="#d9d9d9" stroke-width="2"/>
+  <rect x="118" y="44" width="55" height="48" fill="#474b53" opacity=".95"/>
+  <path d="M58 80 H205" stroke="#c9c9c9" stroke-width="2"/>
+  <rect x="236" y="88" width="68" height="62" rx="6" fill="#f7f7f7" stroke="#d9d9d9" stroke-width="3"/>
+  
+    <circle cx="270" cy="119" r="30" fill="#f4f4f4" stroke="#d9d9d9" stroke-width="3"/>
+    <circle cx="270" cy="119" r="8" fill="#b8babf"/>
+    <path d="M270 111 C308 61,348 95,300 121 C288 127,274 122,270 111Z" fill="#b8babf" opacity=".95"/>
+    <path d="M278 121 C338 135,312 193,271 150 C262 141,265 126,278 121Z" fill="#b8babf" opacity=".95"/>
+    <path d="M264 126 C225 177,186 136,242 114 C255 109,266 113,264 126Z" fill="#b8babf" opacity=".95"/>
+    <path d="M264 113 C204 93,238 43,274 89 C282 99,277 111,264 113Z" fill="#b8babf" opacity=".95"/>
+    
+  <path d="M270 78l10 7-10 7-10-7z" fill="#ed1c24"/>
+  <path d="M282 83l10 7-10 7-10-7z" fill="#0eaae5"/>
+
+</svg>

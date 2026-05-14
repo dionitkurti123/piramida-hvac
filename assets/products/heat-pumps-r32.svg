@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="340" height="210" viewBox="0 0 340 210" role="img" aria-label="heat-pumps-r32.svg">
+  <rect width="340" height="210" fill="#ffffff"/>
+  
+  <rect x="74" y="48" width="52" height="104" rx="8" fill="#f6f7f8" stroke="#d9d9d9" stroke-width="3"/>
+  <rect x="83" y="60" width="34" height="17" rx="3" fill="#e6e8eb"/>
+  <rect x="142" y="70" width="72" height="86" rx="6" fill="#f8f8f8" stroke="#d9d9d9" stroke-width="3"/>
+  
+    <circle cx="178" cy="113" r="30" fill="#f4f4f4" stroke="#d9d9d9" stroke-width="3"/>
+    <circle cx="178" cy="113" r="8" fill="#b8babf"/>
+    <path d="M178 105 C216 55,256 89,208 115 C196 121,182 116,178 105Z" fill="#b8babf" opacity=".95"/>
+    <path d="M186 115 C246 129,220 187,179 144 C170 135,173 120,186 115Z" fill="#b8babf" opacity=".95"/>
+    <path d="M172 120 C133 171,94 130,150 108 C163 103,174 107,172 120Z" fill="#b8babf" opacity=".95"/>
+    <path d="M172 107 C112 87,146 37,182 83 C190 93,185 105,172 107Z" fill="#b8babf" opacity=".95"/>
+    
+  <rect x="226" y="106" width="53" height="44" rx="5" fill="#f1f2f4" stroke="#d9d9d9"/>
+  <path d="M250 94c18 6 25 18 22 35" stroke="#0eaae5" stroke-width="5" fill="none"/>
+
+</svg>

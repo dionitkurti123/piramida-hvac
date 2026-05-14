@@ -5,14 +5,14 @@ const COMPANY = {
   phoneTel: "+3834XXXXXXX",
   whatsapp: "3834XXXXXXX",
   email: "info@piramidahvac.com",
-  address: "Fushë Kosovë, Kosovë",
-  // Replace with your real Google Maps embed URL after you create/open the business profile.
-  mapEmbed: "https://www.google.com/maps?q=Fush%C3%AB%20Kosov%C3%AB%2C%20Kosovo&output=embed"
+  address: "Piramida HVAC, Fushë Kosovë, Kosovë",
+  mapUrl: "https://maps.app.goo.gl/gH9mqYwz3zxkeoAa6",
+  mapEmbed: "https://www.google.com/maps?q=Piramida%20HVAC%20Fush%C3%AB%20Kosov%C3%AB%20Kosovo&output=embed"
 };
 
 function setActiveNavigation() {
   const current = window.location.pathname.split("/").pop() || "index.html";
-  document.querySelectorAll(".nav-links a").forEach((link) => {
+  document.querySelectorAll(".nav-links a, .products-nav a").forEach((link) => {
     const href = link.getAttribute("href");
     if (href === current) link.classList.add("active");
   });
@@ -41,6 +41,7 @@ function fillCompanyDetails() {
   });
   document.querySelectorAll("[data-company-address]").forEach((el) => { el.textContent = COMPANY.address; });
   document.querySelectorAll("[data-map]").forEach((iframe) => { iframe.src = COMPANY.mapEmbed; });
+  document.querySelectorAll("[data-map-link]").forEach((el) => { el.href = COMPANY.mapUrl; });
   document.querySelectorAll("[data-year]").forEach((el) => { el.textContent = new Date().getFullYear(); });
 }
 
@@ -61,13 +62,30 @@ function revealOnScroll() {
 function productIcon(category = "") {
   const value = category.toLowerCase();
   if (value.includes("heat") || value.includes("pomp")) return "♨️";
-  if (value.includes("commercial")) return "🏢";
+  if (value.includes("commercial") || value.includes("komercial")) return "🏢";
   if (value.includes("multi")) return "🔁";
   if (value.includes("vent")) return "💨";
   return "❄️";
 }
 
-function productCard(product) {
+function sinclairProductCard(product) {
+  const title = product.title || [product.brand, product.model].filter(Boolean).join(" ") || "Produkt";
+  const image = product.image
+    ? `<img src="${product.image}" alt="${title}" loading="lazy">`
+    : `<div class="product-placeholder" aria-hidden="true">${productIcon(product.category || product.title)}</div>`;
+  const link = product.productUrl || "contact.html";
+  const description = product.description || "Produkt Sinclair për shitje, montim dhe projektim nga Piramida HVAC.";
+  return `
+    <article class="sinclair-card reveal" data-product-id="${product.id || ""}">
+      <div class="sinclair-card-image">${image}</div>
+      <h3>${title}</h3>
+      <p>${description}</p>
+      <a class="sinclair-card-btn" href="${link}" target="${link.startsWith("http") ? "_blank" : "_self"}" rel="${link.startsWith("http") ? "noopener" : ""}">Përmbledhja e produkteve</a>
+    </article>
+  `;
+}
+
+function legacyProductCard(product) {
   const imageHtml = product.image
     ? `<img src="${product.image}" alt="${product.brand} ${product.model}" loading="lazy">`
     : `<div class="product-placeholder" aria-hidden="true">${productIcon(product.category)}</div>`;
@@ -104,7 +122,9 @@ async function initProductsPage() {
   const searchInput = document.querySelector("[data-product-search]");
   const categorySelect = document.querySelector("[data-product-category]");
   const sortSelect = document.querySelector("[data-product-sort]");
+  const sidebar = document.querySelector("[data-products-sidebar]");
   const empty = document.querySelector("[data-products-empty]");
+  const isSinclairLayout = document.body.classList.contains("sinclair-products-page");
 
   let products = [];
   try {
@@ -117,36 +137,64 @@ async function initProductsPage() {
     return;
   }
 
-  const categories = [...new Set(products.map((p) => p.category).filter(Boolean))].sort();
-  categories.forEach((category) => {
-    const option = document.createElement("option");
-    option.value = category;
-    option.textContent = category;
-    categorySelect.appendChild(option);
-  });
+  let activeId = "";
+
+  function productTitle(product) {
+    return product.title || product.model || "Produkt";
+  }
+
+  function productBlob(product) {
+    return `${product.title || ""} ${product.titleEn || ""} ${product.sidebarTitle || ""} ${product.brand || ""} ${product.model || ""} ${product.category || ""} ${product.description || ""} ${(product.features || []).join(" ")}`.toLowerCase();
+  }
+
+  if (categorySelect) {
+    const categories = [...new Set(products.map((p) => p.category).filter(Boolean))].sort();
+    categories.forEach((category) => {
+      const option = document.createElement("option");
+      option.value = category;
+      option.textContent = category;
+      categorySelect.appendChild(option);
+    });
+  }
+
+  if (sidebar) {
+    sidebar.innerHTML = `
+      <button class="sinclair-side-link active" type="button" data-sidebar-id="">Të gjitha produktet <span>›</span></button>
+      ${products.map((product) => `
+        <button class="sinclair-side-link" type="button" data-sidebar-id="${product.id}">${product.sidebarTitle || productTitle(product)} <span>›</span></button>
+      `).join("")}
+    `;
+    sidebar.addEventListener("click", (event) => {
+      const button = event.target.closest("[data-sidebar-id]");
+      if (!button) return;
+      activeId = button.dataset.sidebarId || "";
+      sidebar.querySelectorAll(".sinclair-side-link").forEach((btn) => btn.classList.toggle("active", btn === button));
+      render();
+    });
+  }
 
   function render() {
-    const term = (searchInput.value || "").toLowerCase().trim();
-    const category = categorySelect.value;
+    const term = (searchInput?.value || "").toLowerCase().trim();
+    const category = categorySelect?.value || "";
     let filtered = products.filter((product) => {
-      const blob = `${product.brand} ${product.model} ${product.category} ${product.description} ${(product.features || []).join(" ")}`.toLowerCase();
-      const matchesTerm = !term || blob.includes(term);
+      const matchesTerm = !term || productBlob(product).includes(term);
       const matchesCategory = !category || product.category === category;
-      return matchesTerm && matchesCategory;
+      const matchesSidebar = !activeId || product.id === activeId;
+      return matchesTerm && matchesCategory && matchesSidebar;
     });
 
-    if (sortSelect.value === "az") {
-      filtered.sort((a, b) => `${a.brand} ${a.model}`.localeCompare(`${b.brand} ${b.model}`));
-    } else if (sortSelect.value === "category") {
-      filtered.sort((a, b) => `${a.category} ${a.model}`.localeCompare(`${b.category} ${b.model}`));
+    if (sortSelect?.value === "az") {
+      filtered.sort((a, b) => productTitle(a).localeCompare(productTitle(b)));
+    } else if (sortSelect?.value === "category") {
+      filtered.sort((a, b) => `${a.category || ""} ${productTitle(a)}`.localeCompare(`${b.category || ""} ${productTitle(b)}`));
     }
 
-    grid.innerHTML = filtered.map(productCard).join("");
-    empty.style.display = filtered.length ? "none" : "block";
+    grid.innerHTML = filtered.map(isSinclairLayout ? sinclairProductCard : legacyProductCard).join("");
+    if (empty) empty.style.display = filtered.length ? "none" : "block";
     revealOnScroll();
   }
 
-  [searchInput, categorySelect, sortSelect].forEach((control) => control.addEventListener("input", render));
+  [searchInput, categorySelect, sortSelect].filter(Boolean).forEach((control) => control.addEventListener("input", render));
   render();
 }
 

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="340" height="210" viewBox="0 0 340 210" role="img" aria-label="tower-series.svg">
+  <rect width="340" height="210" fill="#ffffff"/>
+  
+  <rect x="124" y="34" width="90" height="143" rx="14" fill="#f5f6f7" stroke="#d9d9d9" stroke-width="3"/>
+  <rect x="144" y="52" width="49" height="92" rx="8" fill="#e7e9ec"/>
+  <circle cx="169" cy="158" r="8" fill="#0eaae5"/>
+
+</svg>

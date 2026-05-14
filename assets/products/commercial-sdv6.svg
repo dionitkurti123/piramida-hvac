@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="340" height="210" viewBox="0 0 340 210" role="img" aria-label="commercial-sdv6.svg">
+  <rect width="340" height="210" fill="#ffffff"/>
+  
+  <rect x="38" y="72" width="154" height="62" rx="4" fill="#ed1c24"/>
+  <text x="53" y="116" font-size="54" font-family="Arial Black,Arial,sans-serif" font-weight="900" fill="#fff" transform="skewX(-10)">SDV</text>
+  <text x="190" y="125" font-size="78" font-family="Arial Black,Arial,sans-serif" font-weight="900" fill="#0eaae5">6</text>
+  <path d="M242 77c37 21 36 77 0 98 22-31 20-65 0-98z" fill="#0eaae5" opacity=".8"/>
+
+</svg>
