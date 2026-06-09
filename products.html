@@ -9,20 +9,28 @@
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body class="product-catalog-page">
+
   <div class="top-strip">
     <div class="container">
       <span>Shitje • Montim • Servis HVAC në <strong data-company-city>Fushë Kosovë</strong></span>
-      <span><a data-company-phone href="tel:+3834XXXXXXX">+383 4X XXX XXX</a> · <a data-company-email href="mailto:info@piramidahvac.com">info@piramidahvac.com</a></span>
+      <span>
+        <a data-company-phone href="tel:+3834XXXXXXX">+383 4X XXX XXX</a> · 
+        <a data-company-email href="mailto:info@piramidahvac.com">info@piramidahvac.com</a>
+      </span>
     </div>
   </div>
 
   <header class="site-header">
     <div class="container navbar">
-      <a class="brand" href="index.html" aria-label="Piramida HVAC home">
+      <a class="brand" href="index.html">
         <img src="assets/logo.png" alt="Piramida HVAC logo">
         <div><strong>PIRAMIDA</strong><span>HVAC</span></div>
       </a>
-      <button class="mobile-menu-btn" data-menu-button aria-label="Open menu"><span></span><span></span><span></span></button>
+
+      <button class="mobile-menu-btn" data-menu-button>
+        <span></span><span></span><span></span>
+      </button>
+
       <nav class="nav-links" data-nav-links>
         <a href="index.html">Ballina</a>
         <a href="about.html">Rreth nesh</a>
@@ -34,62 +42,77 @@
   </header>
 
   <main>
+
     <section class="catalog-hero">
       <div class="container catalog-hero-grid">
-        <div class="reveal">
+
+        <div>
           <p class="kicker">Katalogu i produkteve</p>
           <h1>Produkte për <span>ftohje, ngrohje dhe ventilim.</span></h1>
-          <p class="lead">Shikoni kategoritë e produkteve Sinclair dhe kërkoni ofertë për shitje, montim ose projektim në Fushë Kosovë dhe rrethinë.</p>
+          <p class="lead">
+            Shikoni kategoritë e produkteve Sinclair dhe kërkoni ofertë për shitje, montim ose projektim.
+          </p>
+
           <div class="catalog-search-wrap">
-            <label class="catalog-search" aria-label="Kërko produkt">
+            <label class="catalog-search">
               <span>⌕</span>
-              <input data-product-search type="search" placeholder="Kërko produkt, p.sh. pompë termike, mural, chiller...">
+              <input data-product-search type="search" placeholder="Kërko produkt...">
             </label>
           </div>
+
           <div class="hero-actions">
             <a class="btn btn-primary" href="contact.html">Kërko ofertë</a>
-            <a class="btn btn-secondary" data-map-link href="https://maps.app.goo.gl/gH9mqYwz3zxkeoAa6" target="_blank" rel="noopener">Shiko lokacionin</a>
+            <a class="btn btn-secondary" data-map-link href="https://maps.app.goo.gl/gH9mqYwz3zxkeoAa6" target="_blank">Lokacioni</a>
           </div>
         </div>
-        <div class="catalog-hero-card reveal">
-          <img src="assets/logo.png" alt="Piramida HVAC logo">
+
+        <div class="catalog-hero-card">
+          <img src="assets/logo.png" alt="Logo">
           <div>
             <strong>Sinclair & HVAC</strong>
             <span>Klima • Pompa termike • Sisteme komerciale</span>
           </div>
         </div>
+
       </div>
     </section>
 
     <section class="section section-alt catalog-section">
       <div class="container">
-        <div class="section-header reveal">
-          <h2 class="section-title">Kategoritë e <span>produkteve</span></h2>
-          <p class="section-subtitle">Pamja është në stilin e faqes kryesore të Piramida HVAC, ndërsa renditja e produkteve është si katalog: menu në të majtë dhe kartela me foto në të djathtë.</p>
+
+        <div class="section-header">
+          <h2>Kategoritë e <span>produkteve</span></h2>
+          <p>Menu në të majtë dhe produktet në të djathtë.</p>
         </div>
 
         <div class="catalog-layout">
-          <aside class="catalog-sidebar reveal" aria-label="Kategoritë e produkteve">
+
+          <aside class="catalog-sidebar">
             <h3>Kategoritë</h3>
             <div data-products-sidebar></div>
           </aside>
 
           <div class="catalog-products-area">
-            <div class="catalog-toolbar reveal">
+
+            <div class="catalog-toolbar">
               <div>
                 <strong>Produktet</strong>
-                <span data-products-count>Po ngarkohen produktet...</span>
+                <span data-products-count>Po ngarkohen...</span>
               </div>
-              <select data-product-sort aria-label="Rendit produktet">
+
+              <select data-product-sort>
                 <option value="default">Renditja normale</option>
                 <option value="az">A–Z</option>
               </select>
             </div>
+
             <div class="catalog-grid" data-products-grid></div>
+
             <div class="empty-state" data-products-empty>
               <h3>Nuk u gjet asnjë produkt</h3>
-              <p>Provo një fjalë tjetër ose zgjidh “Të gjitha produktet”.</p>
+              <p>Provo një fjalë tjetër ose zgjidh “Të gjitha”.</p>
             </div>
+
           </div>
         </div>
       </div>
@@ -98,21 +121,24 @@
     <section class="band">
       <div class="container">
         <div>
-          <h2>Nuk jeni të sigurt cili produkt ju nevojitet?</h2>
-          <p>Na dërgoni madhësinë e hapësirës, lokacionin dhe llojin e objektit. Ju rekomandojmë kapacitetin dhe modelin e përshtatshëm.</p>
+          <h2>Nuk jeni të sigurt?</h2>
+          <p>Na dërgoni detajet dhe ne ju rekomandojmë modelin e duhur.</p>
         </div>
         <a class="btn" href="contact.html">Na kontaktoni</a>
       </div>
     </section>
+
   </main>
 
   <footer class="footer">
     <div class="container">
+
       <div class="footer-grid">
         <div>
-          <img src="assets/logo.png" alt="Piramida HVAC logo">
-          <p>Piramida HVAC ofron zgjidhje për ftohje, ngrohje dhe ventilim në Fushë Kosovë dhe rrethinë.</p>
+          <img src="assets/logo.png" alt="logo">
+          <p>Zgjidhje HVAC në Kosovë.</p>
         </div>
+
         <div>
           <h3>Faqet</h3>
           <a href="index.html">Ballina</a>
@@ -120,24 +146,27 @@
           <a href="products.html">Produktet</a>
           <a href="contact.html">Kontakt</a>
         </div>
+
         <div>
           <h3>Shërbime</h3>
-          <a href="products.html">Klima</a>
-          <a href="products.html">Pompa termike</a>
+          <a href="#">Klima</a>
+          <a href="#">Pompa termike</a>
           <a href="contact.html">Montim</a>
           <a href="contact.html">Servis</a>
         </div>
+
         <div>
           <h3>Kontakt</h3>
-          <a data-company-phone href="tel:+3834XXXXXXX">+383 4X XXX XXX</a>
-          <a data-company-email href="mailto:info@piramidahvac.com">info@piramidahvac.com</a>
-          <a data-map-link href="https://maps.app.goo.gl/gH9mqYwz3zxkeoAa6" target="_blank" rel="noopener"><span data-company-address>Piramida HVAC, Fushë Kosovë, Kosovë</span></a>
+          <a href="tel:+3834XXXXXXX">+383 4X XXX XXX</a>
+          <a href="mailto:info@piramidahvac.com">info@piramidahvac.com</a>
         </div>
       </div>
+
       <div class="footer-bottom">
-        <span>© <span data-year></span> Piramida HVAC. Të gjitha të drejtat e rezervuara.</span>
+        <span>© <span data-year></span> Piramida HVAC</span>
         <span>Built for GitHub Pages.</span>
       </div>
+
     </div>
   </footer>
 
