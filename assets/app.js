@@ -235,25 +235,43 @@ function productBlob(product) {
 
 function catalogProductCard(product) {
   const title = productTitle(product);
+
   const image = product.image
     ? `<img src="${product.image}" alt="${title}" loading="lazy">`
-    : `<div class="product-placeholder" aria-hidden="true">${productIcon(product.category || product.title)}</div>`;
-  const inquiryText = encodeURIComponent(`Përshëndetje, jam i/e interesuar për: ${title}`);
-  const infoLink = product.productUrl || "contact.html";
-  const target = infoLink.startsWith("http") ? "_blank" : "_self";
-  const rel = infoLink.startsWith("http") ? "noopener" : "";
+    : `<div class="product-placeholder">${productIcon(product.category || product.title)}</div>`;
+
+  const inquiryText = encodeURIComponent(
+    `Përshëndetje, jam i/e interesuar për: ${title}`
+  );
 
   return `
     <article class="catalog-card reveal" data-product-id="${product.id || ""}">
-      <div class="catalog-card-image">${image}</div>
-      <div class="catalog-card-body">
-        <h3>${title}</h3>
-        <p>${product.description || "Produkt HVAC për shitje, montim dhe projektim profesional."}</p>
-        <div class="catalog-card-actions">
-          <a class="catalog-card-btn" href="${infoLink}" target="${target}" rel="${rel}">Përmbledhje</a>
-          <a class="catalog-card-btn catalog-card-btn-red" href="https://wa.me/${COMPANY.whatsapp}?text=${inquiryText}" target="_blank" rel="noopener">Kërko ofertë</a>
+      
+      <div class="catalog-card-image">
+        ${image}
+
+        <div class="catalog-card-overlay">
+          <h3>${title}</h3>
+          <p>
+            ${product.description || "Produkt HVAC profesional për ftohje, ngrohje dhe ventilim."}
+          </p>
         </div>
       </div>
+
+      <div class="catalog-card-body">
+        <h3>${title}</h3>
+
+        <div class="catalog-card-actions">
+          <a
+            class="catalog-card-btn catalog-card-btn-red"
+            href="https://wa.me/${COMPANY.whatsapp}?text=${inquiryText}"
+            target="_blank"
+            rel="noopener">
+            Kërko ofertë
+          </a>
+        </div>
+      </div>
+
     </article>
   `;
 }
