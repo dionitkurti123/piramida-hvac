@@ -1,10 +1,10 @@
 const COMPANY = {
   name: "Piramida HVAC",
   city: "Fushë Kosovë, Kosovë",
-  phoneDisplay: "+383 44 635 966",
-  phoneTel: "+383 44 635 966",
-  whatsapp: "+383 44 635 966",
-  email: "info@piramidahvac.com",
+  phoneDisplay: "+383 48 559 888",
+  phoneTel: "+383 48 559 888",
+  whatsapp: "+383 48 559 888",
+  email: "info@piramida-hvac.com",
   address: "Nëna Terezë, Fushë Kosovë, Kosovë",
   mapUrl: "https://maps.app.goo.gl/Di5mHocnKfDJe8LY7",
   mapEmbed: "https://www.google.com/maps?q=Piramida%20HVAC%20Fush%C3%AB%20Kosov%C3%AB%20Kosovo&output=embed"
