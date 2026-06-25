@@ -34,7 +34,7 @@ const DEFAULT_PRODUCTS = [
     id: "wall-mounted-units",
     title: "Wall Mounted Units",
     sidebarTitle: "Wall Mounted Units",
-    image: "assets/products/wall-mounted-units.jpg",
+    image: "assets/products/wallm.png",
     description: "Njësi murale për ftohje dhe ngrohje."
   },
 
@@ -42,7 +42,7 @@ const DEFAULT_PRODUCTS = [
     id: "multi-variable-r32",
     title: "MULTI VARIABLE Series R32",
     sidebarTitle: "MULTI VARIABLE Series R32",
-    image: "assets/products/multi-variable-r32.jpg",
+    image: "assets/products/r32.png",
     description: "Sisteme Multi Variable me teknologji R32."
   },
 
@@ -50,7 +50,7 @@ const DEFAULT_PRODUCTS = [
     id: "commercial-system",
     title: "Commercial System",
     sidebarTitle: "Commercial System",
-    image: "assets/products/commercial-system.jpg",
+    image: "assets/products/commercial.png",
     description: "Sisteme komerciale HVAC për biznese dhe objekte të mëdha."
   },
 
@@ -58,7 +58,7 @@ const DEFAULT_PRODUCTS = [
     id: "uni-split-2",
     title: "UNI SPLIT 2",
     sidebarTitle: "UNI SPLIT 2",
-    image: "assets/products/uni-split-2.jpg",
+    image: "assets/products/unisplit2.png",
     description: "Sisteme UNI SPLIT 2 për aplikime rezidenciale dhe komerciale."
   },
 
@@ -66,7 +66,7 @@ const DEFAULT_PRODUCTS = [
     id: "chillers",
     title: "Chillers",
     sidebarTitle: "Chillers",
-    image: "assets/products/chillers.jpg",
+    image: "assets/products/chill.png",
     description: "Chiller për ftohje komerciale dhe industriale."
   },
 
@@ -74,7 +74,7 @@ const DEFAULT_PRODUCTS = [
     id: "fan-coil-units",
     title: "Fan Coil Units",
     sidebarTitle: "Fan Coil Units",
-    image: "assets/products/fan-coil-units.jpg",
+    image: "assets/products/fancoil.png",
     description: "Fan Coil Units për sisteme HVAC moderne."
   },
 
@@ -82,7 +82,7 @@ const DEFAULT_PRODUCTS = [
     id: "portable-units",
     title: "Portable Units",
     sidebarTitle: "Portable Units",
-    image: "assets/products/portable-units.jpg",
+    image: "assets/products/port.png",
     description: "Njësi portative për ftohje dhe ventilim."
   }
 ];
