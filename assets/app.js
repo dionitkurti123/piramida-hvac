@@ -32,158 +32,61 @@ function openWhatsApp(message = "Përshëndetje, dua një ofertë për HVAC") {
 const DEFAULT_PRODUCTS = [
   {
     id: "wall-mounted-units",
-    title: "Njësi murale",
-    titleEn: "Wall mounted units",
-    sidebarTitle: "Njësi murale",
-    image: "assets/products/wall-mounted-units.svg",
-    productUrl: "https://www.sinclair-solutions.com/en/products/",
-    description: "Klima murale Sinclair për ftohje dhe ngrohje në shtëpi, banesa, zyra dhe lokale."
+    title: "Wall Mounted Units",
+    sidebarTitle: "Wall Mounted Units",
+    image: "assets/products/wall-mounted-units.jpg",
+    description: "Njësi murale për ftohje dhe ngrohje."
   },
+
   {
     id: "multi-variable-r32",
-    title: "Seria MULTI VARIABLE R32",
-    titleEn: "MULTI VARIABLE series R32",
-    sidebarTitle: "Seria MULTI VARIABLE R32",
-    image: "assets/products/multi-variable-r32.svg",
-    productUrl: "https://www.sinclair-solutions.com/en/products/",
-    description: "Zgjidhje multi-split me njësi të jashtme dhe disa njësi të brendshme."
+    title: "MULTI VARIABLE Series R32",
+    sidebarTitle: "MULTI VARIABLE Series R32",
+    image: "assets/products/multi-variable-r32.jpg",
+    description: "Sisteme Multi Variable me teknologji R32."
   },
+
   {
-    id: "commercial-sdv5",
-    title: "Sistemi komercial SDV5",
-    titleEn: "Commercial system SDV5",
-    sidebarTitle: "Sistemi komercial SDV5",
-    image: "assets/products/commercial-sdv5.svg",
-    productUrl: "https://www.sinclair-solutions.com/en/products/",
-    description: "Sisteme komerciale për objekte biznesi dhe hapësira më të mëdha."
+    id: "commercial-system",
+    title: "Commercial System",
+    sidebarTitle: "Commercial System",
+    image: "assets/products/commercial-system.jpg",
+    description: "Sisteme komerciale HVAC për biznese dhe objekte të mëdha."
   },
+
   {
-    id: "commercial-sdv6",
-    title: "Sistemi komercial SDV6",
-    titleEn: "Commercial system SDV6",
-    sidebarTitle: "Sistemi komercial SDV6",
-    image: "assets/products/commercial-sdv6.svg",
-    productUrl: "https://www.sinclair-solutions.com/en/products/",
-    description: "Gjeneratë komerciale për ftohje dhe ngrohje me projektim profesional."
+    id: "uni-split-2",
+    title: "UNI SPLIT 2",
+    sidebarTitle: "UNI SPLIT 2",
+    image: "assets/products/uni-split-2.jpg",
+    description: "Sisteme UNI SPLIT 2 për aplikime rezidenciale dhe komerciale."
   },
-  {
-    id: "heat-pumps-r32",
-    title: "Pompa termike R32",
-    titleEn: "Heat Pumps R32",
-    sidebarTitle: "Pompa termike R32",
-    image: "assets/products/heat-pumps-r32.svg",
-    productUrl: "https://www.sinclair-solutions.com/en/products/",
-    description: "Pompa termike për ngrohje, ftohje dhe efikasitet energjetik."
-  },
-  {
-    id: "heat-pumps-r290",
-    title: "Pompa termike R290",
-    titleEn: "Heat Pumps R290",
-    sidebarTitle: "Pompa termike R290",
-    image: "assets/products/heat-pumps-r290.svg",
-    productUrl: "https://www.sinclair-solutions.com/en/products/",
-    description: "Pompa termike moderne me ftohës R290 për performancë të lartë."
-  },
-  {
-    id: "uni-split-r32",
-    title: "Seria UNI SPLIT R32",
-    titleEn: "UNI SPLIT series R32",
-    sidebarTitle: "Seria UNI SPLIT R32",
-    image: "assets/products/uni-split-r32.svg",
-    productUrl: "https://www.sinclair-solutions.com/en/products/",
-    description: "Sisteme split për ambiente rezidenciale dhe komerciale."
-  },
-  {
-    id: "uni-split-2-r32",
-    title: "Seria UNI SPLIT 2 R32",
-    titleEn: "UNI SPLIT 2 Series R32",
-    sidebarTitle: "Seria UNI SPLIT 2 R32",
-    image: "assets/products/uni-split-2-r32.svg",
-    productUrl: "https://www.sinclair-solutions.com/en/products/",
-    description: "Zgjidhje split me konfigurime fleksibile për instalime të ndryshme."
-  },
+
   {
     id: "chillers",
-    title: "Chiller",
-    titleEn: "Chillers",
-    sidebarTitle: "Chiller",
-    image: "assets/products/chillers.svg",
-    productUrl: "https://www.sinclair-solutions.com/en/products/",
-    description: "Pajisje për ftohje komerciale dhe industriale sipas projektit."
+    title: "Chillers",
+    sidebarTitle: "Chillers",
+    image: "assets/products/chillers.jpg",
+    description: "Chiller për ftohje komerciale dhe industriale."
   },
+
   {
     id: "fan-coil-units",
     title: "Fan Coil Units",
-    titleEn: "Fan Coil Units",
     sidebarTitle: "Fan Coil Units",
-    image: "assets/products/fan-coil-units.svg",
-    productUrl: "https://www.sinclair-solutions.com/en/products/",
-    description: "Njësi fan coil për shpërndarje të ajrit në sisteme HVAC."
+    image: "assets/products/fan-coil-units.jpg",
+    description: "Fan Coil Units për sisteme HVAC moderne."
   },
+
   {
     id: "portable-units",
-    title: "Njësi portative",
-    titleEn: "Portable units",
-    sidebarTitle: "Njësi portative",
-    image: "assets/products/portable-units.svg",
-    productUrl: "https://www.sinclair-solutions.com/en/products/",
-    description: "Klima portative për përdorim fleksibil dhe instalim të thjeshtë."
-  },
-  {
-    id: "monoblock-units",
-    title: "Njësi monobllok",
-    titleEn: "Monoblock Units",
-    sidebarTitle: "Njësi monobllok",
-    image: "assets/products/monoblock-units.svg",
-    productUrl: "https://www.sinclair-solutions.com/en/products/",
-    description: "Njësi monobllok për aplikime ku kërkohet instalim i kompaktuar."
-  },
-  {
-    id: "campers-boats",
-    title: "Camper, rimorkio & anije",
-    titleEn: "Camper Trailers & Boats",
-    sidebarTitle: "Camper, rimorkio & anije",
-    image: "assets/products/portable-units.svg",
-    productUrl: "https://www.sinclair-solutions.com/en/products/",
-    description: "Zgjidhje klimatizimi për camper, rimorkio dhe anije."
-  },
-  {
-    id: "optional-accessories",
-    title: "Aksesorë opsionalë",
-    titleEn: "Optional accessories",
-    sidebarTitle: "Aksesorë opsionalë",
-    image: "assets/products/accessories.svg",
-    productUrl: "https://www.sinclair-solutions.com/en/products/",
-    description: "Aksesorë shtesë për kontroll, instalim dhe mirëmbajtje."
-  },
-  {
-    id: "tower-series",
-    title: "Seria Tower",
-    titleEn: "Tower series",
-    sidebarTitle: "Seria Tower",
-    image: "assets/products/tower-series.svg",
-    productUrl: "https://www.sinclair-solutions.com/en/products/",
-    description: "Njësi tower për hapësira ku kërkohet kapacitet dhe estetikë."
-  },
-  {
-    id: "high-static-pressure-duct-r410a",
-    title: "Kanale me presion të lartë R410A",
-    titleEn: "High Static Pressure Duct Series R410A",
-    sidebarTitle: "Kanale me presion të lartë R410A",
-    image: "assets/products/duct.svg",
-    productUrl: "https://www.sinclair-solutions.com/en/products/",
-    description: "Njësi kanalore me presion të lartë statik për instalime të avancuara."
-  },
-  {
-    id: "led-lighting",
-    title: "Ndriçim LED",
-    titleEn: "LED lighting",
-    sidebarTitle: "Ndriçim LED",
-    image: "assets/products/led-lighting.svg",
-    productUrl: "https://www.sinclair-solutions.com/en/products/",
-    description: "Ndriçim LED dhe zgjidhje shtesë sipas ofertës."
+    title: "Portable Units",
+    sidebarTitle: "Portable Units",
+    image: "assets/products/portable-units.jpg",
+    description: "Njësi portative për ftohje dhe ventilim."
   }
 ];
+
 
 /* -----------------------------
    NAVIGATION + COMPANY DETAILS
